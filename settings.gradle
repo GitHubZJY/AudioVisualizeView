@@ -1,0 +1,3 @@
+include ':audiovisualize'
+include ':app'
+rootProject.name = "AudioVisualizeView"
