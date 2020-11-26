@@ -6,10 +6,11 @@
         <attr name="visualize_count" format="integer"/>
         <attr name="visualize_ratio" format="float"/>
         <attr name="visualize_mode" format="enum">
-            <enum name="horizontal_line" value="1" />
-            <enum name="circle" value="2" />
-            <enum name="reflect" value="3" />
-            <enum name="wave" value="4" />
+            <enum name="horizontal_line_top" value="1" />
+            <enum name="horizontal_line_bottom" value="2" />
+            <enum name="circle" value="3" />
+            <enum name="reflect" value="4" />
+            <enum name="wave" value="5" />
         </attr>
     </declare-styleable>
 

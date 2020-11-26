@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         vAudioVisualize = findViewById(R.id.audio_visualize_view);
-        vAudioVisualize.doPlay(R.raw.bell_2);
+        vAudioVisualize.doPlay(R.raw.sound);
     }
 
     @Override

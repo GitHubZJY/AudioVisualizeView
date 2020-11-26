@@ -9,8 +9,11 @@
 
     <com.zjy.audiovisualize.view.AudioVisualizeView
         android:id="@+id/audio_visualize_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:visualize_ratio="2"
+        app:visualize_mode="horizontal_line_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
