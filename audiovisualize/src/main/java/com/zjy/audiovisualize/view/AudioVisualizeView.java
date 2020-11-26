@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.media.MediaPlayer;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -142,6 +143,27 @@ public class AudioVisualizeView extends View implements MediaManagerListener, Vi
         }
     }
 
+    /**
+     * start play url file
+     */
+    public void doPlay(final String filePath) {
+        if (mediaManager != null) {
+            mediaManager.doPlay(filePath);
+        }
+    }
+
+    /**
+     * play with session Id, which visualize need.
+     * @param audioSessionId {@link MediaPlayer#getAudioSessionId()}
+     */
+    public void playWithSessionId(int audioSessionId) {
+        try {
+            visualizerHelper.setAudioSessionId(audioSessionId);
+        } catch (Exception e) {
+            LogUtils.e(e.getMessage());
+        }
+    }
+
     @Override
     public void onPrepare() {
         try {
@@ -159,6 +181,30 @@ public class AudioVisualizeView extends View implements MediaManagerListener, Vi
         }
         mRawAudioBytes = parseData;
         invalidate();
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int finallyWidth;
+        int finallyHeight;
+        int wSpecMode = MeasureSpec.getMode(widthMeasureSpec);
+        int wSpecSize = MeasureSpec.getSize(widthMeasureSpec);
+        int hSpecMode = MeasureSpec.getMode(heightMeasureSpec);
+        int hSpecSize = MeasureSpec.getSize(heightMeasureSpec);
+        if (wSpecMode == MeasureSpec.EXACTLY) {
+            finallyWidth = wSpecSize;
+        } else {
+            finallyWidth = 500;
+        }
+
+        if (hSpecMode == MeasureSpec.EXACTLY) {
+            finallyHeight = hSpecSize;
+        } else {
+            finallyHeight = 500;
+        }
+
+        setMeasuredDimension(finallyWidth, finallyHeight);
     }
 
     @Override
@@ -249,6 +295,18 @@ public class AudioVisualizeView extends View implements MediaManagerListener, Vi
      */
     public void hide() {
         this.isVisualizationEnabled = false;
+    }
+
+    /**
+     * release media player and visualizer
+     */
+    public void release() {
+        if (visualizerHelper != null) {
+           visualizerHelper.release();
+        }
+        if (mediaManager != null) {
+            mediaManager.release();
+        }
     }
 
 }

@@ -18,4 +18,12 @@ public class MainActivity extends AppCompatActivity {
         vAudioVisualize = findViewById(R.id.audio_visualize_view);
         vAudioVisualize.doPlay(R.raw.bell_2);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (vAudioVisualize != null) {
+           vAudioVisualize.release();
+        }
+    }
 }
