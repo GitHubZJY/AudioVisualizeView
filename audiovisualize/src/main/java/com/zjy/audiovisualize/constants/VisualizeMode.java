@@ -27,5 +27,9 @@ public class VisualizeMode {
      * In WAVE mode, show spectrum base on a horizontal line, it will link all points of spectrum so like a wave.
      */
     public final static int WAVE = 5;
+    /**
+     * In NET mode, show spectrum base on a circle, with jumping around it and link all points of spectrum so like a net.
+     */
+    public final static int NET = 6;
 
 }

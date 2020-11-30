@@ -7,11 +7,11 @@
     android:background="#000000"
     tools:context=".MainActivity">
 
-    <com.zjy.audiovisualize.view.AudioVisualizeView
+    <com.zjy.audiovisualize.view.ReflectVisualizeView
         android:id="@+id/audio_visualize_view"
         android:text="Hello World!"
         app:visualize_ratio="2"
-        app:visualize_mode="horizontal_line_top"
+        app:visualize_mode="net"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
