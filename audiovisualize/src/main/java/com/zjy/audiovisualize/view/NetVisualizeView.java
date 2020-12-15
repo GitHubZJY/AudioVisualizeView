@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 /**
  * Date: 2020/11/30
  * Author: Yang
- * Describe:
+ * Describe: In NET mode, show spectrum base on a circle, with jumping around it and link all points of spectrum so like a net.
  */
 public class NetVisualizeView extends AudioVisualizeView{
 

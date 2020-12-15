@@ -11,7 +11,7 @@
     <com.zjy.audiovisualize.view.WaveVisualizeView
         android:id="@+id/audio_visualize_view"
         android:text="Hello World!"
-        app:visualize_ratio="2"
+        app:visualize_ratio="4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

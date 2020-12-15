@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 /**
  * Date: 2020/11/30
  * Author: Yang
- * Describe:
+ * Describe: In WAVE mode, show spectrum base on a horizontal line, it will link all points of spectrum so like a wave.
  */
 public class WaveVisualizeView extends AudioVisualizeView{
 

@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 /**
  * Date: 2020/11/30
  * Author: Yang
- * Describe:
+ * Describe: In CIRCLE mode, show spectrum base on a circle, with jumping around it
  */
 public class CircleVisualizeView extends AudioVisualizeView{
 

@@ -16,7 +16,7 @@ import static com.zjy.audiovisualize.constants.VisualizeMode.HORIZONTAL_LINE_TOP
 /**
  * Date: 2020/11/30
  * Author: Yang
- * Describe:
+ * Describe: In SINGLE mode, show spectrum base on a horizontal line, with jumping above of the center line , it's also default visualize mode.
  */
 public class SingleVisualizeView extends AudioVisualizeView{
 

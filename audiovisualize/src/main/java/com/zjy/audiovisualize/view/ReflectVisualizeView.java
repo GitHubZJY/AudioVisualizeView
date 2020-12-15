@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 /**
  * Date: 2020/11/30
  * Author: Yang
- * Describe:
+ * Describe: In REFLECT mode, show spectrum base on a horizontal line, different with HORIZONTAL_LINE mode, it will show both sides of line.
  */
 public class ReflectVisualizeView extends AudioVisualizeView{
 
