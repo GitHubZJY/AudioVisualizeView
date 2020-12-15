@@ -1,19 +1,21 @@
 package com.zjy.audiovisualizeview;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
-import android.widget.Toast;
-
-import com.zjy.audiovisualize.view.AudioVisualizeView;
 import com.zjy.audiovisualizeview.utils.PermissionUtils;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private AudioVisualizeView vAudioVisualize;
+    private TextView vReflect, vCircle, vSingle, vWave, vNet;
     private static final int RECORD_AUDIO = 10001;
     private static final int READ_EXTERNAL_STORAGE = 10002;
 
@@ -22,11 +24,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        vAudioVisualize = findViewById(R.id.audio_visualize_view);
-        vAudioVisualize.doPlay(R.raw.sound);
+        vReflect = findViewById(R.id.reflect_entrance);
+        vCircle = findViewById(R.id.circle_entrance);
+        vSingle = findViewById(R.id.single_entrance);
+        vWave = findViewById(R.id.wave_entrance);
+        vNet = findViewById(R.id.net_entrance);
+        vSingle.setOnClickListener(this);
+        vReflect.setOnClickListener(this);
+        vCircle.setOnClickListener(this);
+        vWave.setOnClickListener(this);
+        vNet.setOnClickListener(this);
 
         PermissionUtils.requestPermission(MainActivity.this, Manifest.permission.RECORD_AUDIO, RECORD_AUDIO);
         PermissionUtils.requestPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE);
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = null;
+        switch (view.getId()) {
+            case R.id.single_entrance:
+                intent = new Intent(MainActivity.this, SingleVisualizeActivity.class);
+                break;
+            case R.id.reflect_entrance:
+                intent = new Intent(MainActivity.this, ReflectVisualizeActivity.class);
+                break;
+            case R.id.circle_entrance:
+                intent = new Intent(MainActivity.this, CircleVisualizeActivity.class);
+                break;
+            case R.id.wave_entrance:
+                intent = new Intent(MainActivity.this, WaveVisualizeActivity.class);
+                break;
+            case R.id.net_entrance:
+                intent = new Intent(MainActivity.this, NetVisualizeActivity.class);
+                break;
+        }
+        startActivity(intent);
     }
 
     @Override
@@ -46,8 +79,5 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (vAudioVisualize != null) {
-           vAudioVisualize.release();
-        }
     }
 }

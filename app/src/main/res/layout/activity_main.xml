@@ -1,21 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
     tools:context=".MainActivity">
 
-    <com.zjy.audiovisualize.view.ReflectVisualizeView
-        android:id="@+id/audio_visualize_view"
-        android:text="Hello World!"
-        app:visualize_ratio="2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/single_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_entrance"
+        android:gravity="center"
+        android:text="SingleVisualizeView"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/reflect_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_entrance"
+        android:gravity="center"
+        android:text="ReflectVisualizeView"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/circle_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_entrance"
+        android:gravity="center"
+        android:text="CircleVisualizeView"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/wave_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_entrance"
+        android:gravity="center"
+        android:text="WaveVisualizeView"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/net_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_entrance"
+        android:gravity="center"
+        android:text="NetVisualizeView"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

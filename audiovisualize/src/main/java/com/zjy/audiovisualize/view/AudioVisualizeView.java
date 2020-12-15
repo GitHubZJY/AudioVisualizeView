@@ -88,6 +88,7 @@ public abstract class AudioVisualizeView extends View implements MediaManagerLis
             mColor = ta.getColor(R.styleable.AudioVisualizeView_visualize_color, Color.WHITE);
             mSpectrumCount = ta.getInteger(R.styleable.AudioVisualizeView_visualize_count, 60);
             mSpectrumRatio = ta.getFloat(R.styleable.AudioVisualizeView_visualize_ratio, 1.0f);
+            mItemMargin = ta.getDimension(R.styleable.AudioVisualizeView_visualize_item_margin, 12f);
             handleAttr(ta);
         } catch (Exception e) {
             e.printStackTrace();
@@ -99,7 +100,6 @@ public abstract class AudioVisualizeView extends View implements MediaManagerLis
 
     protected void init() {
         mStrokeWidth = 5;
-        mItemMargin = 12;
 
         mPaint = new Paint();
         mPaint.setStrokeWidth(mStrokeWidth);

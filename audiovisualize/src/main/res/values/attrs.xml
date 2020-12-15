@@ -5,6 +5,7 @@
         <attr name="visualize_color" format="reference|color"/>
         <attr name="visualize_count" format="integer"/>
         <attr name="visualize_ratio" format="float"/>
+        <attr name="visualize_item_margin" format="dimension"/>
         <attr name="visualize_orientation" format="enum">
             <enum name="horizontal_line_top" value="1" />
             <enum name="horizontal_line_bottom" value="2" />

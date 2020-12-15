@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ReflectVisualizeActivity"/>
+        <activity android:name=".CircleVisualizeActivity"/>
+        <activity android:name=".SingleVisualizeActivity"/>
+        <activity android:name=".WaveVisualizeActivity"/>
+        <activity android:name=".NetVisualizeActivity"/>
     </application>
 
 </manifest>
