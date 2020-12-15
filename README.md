@@ -1,4 +1,4 @@
-# AudioVisualizeView
+# AudioVisualizeView [![](https://jitpack.io/v/GitHubZJY/AudioVisualizeView.svg)](https://jitpack.io/#GitHubZJY/AudioVisualizeView)
     许多音乐App上常见的音频可视化效果，读取音频数据并利用傅里叶转换成可视化的字节数据，再通过自定义View渲染而成.
     组件源码目录：https://github.com/GitHubZJY/AudioVisualizeView/tree/master/audiovisualize
     demo目录：https://github.com/GitHubZJY/AudioVisualizeView/tree/master/app
