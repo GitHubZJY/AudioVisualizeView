@@ -61,4 +61,14 @@
         android:text="NetVisualizeView"
         android:textColor="#FFFFFF" />
 
+    <TextView
+        android:id="@+id/grain_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_entrance"
+        android:gravity="center"
+        android:text="GrainVisualizeView"
+        android:textColor="#FFFFFF" />
+
 </LinearLayout>

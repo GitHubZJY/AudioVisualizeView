@@ -15,7 +15,7 @@ import com.zjy.audiovisualizeview.utils.PermissionUtils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView vReflect, vCircle, vSingle, vWave, vNet;
+    private TextView vReflect, vCircle, vSingle, vWave, vNet, vGrain;
     private static final int RECORD_AUDIO = 10001;
     private static final int READ_EXTERNAL_STORAGE = 10002;
 
@@ -29,11 +29,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         vSingle = findViewById(R.id.single_entrance);
         vWave = findViewById(R.id.wave_entrance);
         vNet = findViewById(R.id.net_entrance);
+        vGrain = findViewById(R.id.grain_entrance);
         vSingle.setOnClickListener(this);
         vReflect.setOnClickListener(this);
         vCircle.setOnClickListener(this);
         vWave.setOnClickListener(this);
         vNet.setOnClickListener(this);
+        vGrain.setOnClickListener(this);
 
         PermissionUtils.requestPermission(MainActivity.this, Manifest.permission.RECORD_AUDIO, RECORD_AUDIO);
         PermissionUtils.requestPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE);
@@ -57,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.net_entrance:
                 intent = new Intent(MainActivity.this, NetVisualizeActivity.class);
+                break;
+            case R.id.grain_entrance:
+                intent = new Intent(MainActivity.this, GrainVisualizeActivity.class);
                 break;
         }
         startActivity(intent);

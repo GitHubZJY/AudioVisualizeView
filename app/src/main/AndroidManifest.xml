@@ -22,6 +22,7 @@
         <activity android:name=".SingleVisualizeActivity"/>
         <activity android:name=".WaveVisualizeActivity"/>
         <activity android:name=".NetVisualizeActivity"/>
+        <activity android:name=".GrainVisualizeActivity"/>
     </application>
 
 </manifest>

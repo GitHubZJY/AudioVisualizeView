@@ -7,7 +7,7 @@
 1. 支持自定义可视化颜色 <br/>
 2. 支持本地路径、url、raw的音频路径读取，或自定义外部MediaPlayer传入音频数据渲染 <br/>
 3. 支持自定义频谱展示数目 <br/>
-4. 支持多种可视化展示形式，包括圆形、水平、波浪、网状等 <br/>
+4. 支持多种可视化展示形式，包括圆形、水平、波浪、网状、粒子等 <br/>
 5. 支持AndroidX <br/>
 
 ## 效果预览
@@ -16,6 +16,7 @@
 ![](https://github.com/GitHubZJY/AudioVisualizeView/blob/master/image/CircleVisualize.gif)
 ![](https://github.com/GitHubZJY/AudioVisualizeView/blob/master/image/WaveVisualize.gif)
 ![](https://github.com/GitHubZJY/AudioVisualizeView/blob/master/image/NetVisualize.gif)
+![](https://github.com/GitHubZJY/AudioVisualizeView/blob/master/image/GrainVisualize.gif)
 
 ## 如何使用
 在项目根目录的build.gradle添加：
