@@ -43,16 +43,16 @@ public class VisualizerHelper {
             @Override
             public void onFftDataCapture(Visualizer visualizer, byte[] fft,
                                          int samplingRate) {
-                byte[] model = new byte[fft.length / 2 + 1];
-                model[0] = (byte) Math.abs(fft[1]);
+                float[] model = new float[fft.length / 2 + 1];
+                model[0] = (float) Math.abs(fft[1]);
                 int j = 1;
 
                 for (int i = 2; i < mCount *2;) {
 
-                    model[j] = (byte) Math.hypot(fft[i], fft[i + 1]);
+                    model[j] = (float) Math.hypot(fft[i], fft[i + 1]);
                     i += 2;
                     j++;
-
+                    model[j] = (float) Math.abs(fft[j]);
                 }
                 if (mCallback != null) {
                     mCallback.onFftDataCapture(model);

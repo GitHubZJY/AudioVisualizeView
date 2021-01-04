@@ -40,9 +40,6 @@ public class WaveVisualizeView extends AudioVisualizeView{
         mPath.moveTo(0, centerY);
 
         for (int i = 0; i < mSpectrumCount; i++) {
-            if (mRawAudioBytes[i] < 0) {
-                mRawAudioBytes[i] = 127;
-            }
             mPath.lineTo(mRect.width() * i / mSpectrumCount, 2 + mRect.height() / 2 + mRawAudioBytes[i]);
         }
         mPath.lineTo(mRect.width(), centerY);

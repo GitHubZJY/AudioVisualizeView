@@ -46,9 +46,6 @@ public class GrainVisualizeView extends AudioVisualizeView{
         mPaint.setStrokeWidth(mStrokeWidth);
         mPaint.setStyle(Paint.Style.FILL);
         for (int i = 0; i < mSpectrumCount; i++) {
-            if (mRawAudioBytes[i] < 0) {
-                mRawAudioBytes[i] = 127;
-            }
             switch (mOrientation) {
                 case HORIZONTAL_LINE_TOP:
                     drawGrain(canvas, mRect.width() * i / mSpectrumCount, mRect.height() / 2, 2 + mRect.height() / 2 - mRawAudioBytes[i]);

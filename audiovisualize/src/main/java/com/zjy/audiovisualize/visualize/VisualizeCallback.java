@@ -7,6 +7,6 @@ package com.zjy.audiovisualize.visualize;
  */
 public interface VisualizeCallback {
 
-    void onFftDataCapture(byte[] parseData);
+    void onFftDataCapture(float[] parseData);
 
 }

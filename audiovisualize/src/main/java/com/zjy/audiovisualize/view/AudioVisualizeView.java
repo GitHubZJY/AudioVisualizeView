@@ -55,7 +55,7 @@ public abstract class AudioVisualizeView extends View implements MediaManagerLis
     /**
      * audio data transform by hypot
      */
-    protected byte[] mRawAudioBytes;
+    protected float[] mRawAudioBytes;
 
     protected RectF mRect;
     protected Paint mPaint;
@@ -160,7 +160,7 @@ public abstract class AudioVisualizeView extends View implements MediaManagerLis
     }
 
     @Override
-    public void onFftDataCapture(byte[] parseData) {
+    public void onFftDataCapture(float[] parseData) {
         if (!isVisualizationEnabled) {
             return;
         }

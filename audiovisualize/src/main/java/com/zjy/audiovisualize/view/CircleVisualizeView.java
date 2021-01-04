@@ -43,9 +43,6 @@ public class CircleVisualizeView extends AudioVisualizeView{
         mPaint.setStyle(Paint.Style.FILL);
         mPath.moveTo(0, centerY);
         for (int i = 0; i < mSpectrumCount; i++) {
-            if (mRawAudioBytes[i] < 0) {
-                mRawAudioBytes[i] = 127;
-            }
             double angel = ((360d/ mSpectrumCount *1.0d) * (i+1));
             double startX = centerX + (radius + mStrokeWidth/2) * Math.sin(Math.toRadians(angel));
             double startY = centerY + (radius + mStrokeWidth/2) * Math.cos(Math.toRadians(angel));
