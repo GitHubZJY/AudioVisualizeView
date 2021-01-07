@@ -52,7 +52,7 @@ public class VisualizerHelper {
                     model[j] = (float) Math.hypot(fft[i], fft[i + 1]);
                     i += 2;
                     j++;
-                    model[j] = (float) Math.abs(fft[j]);
+                    model[j] = Math.abs(model[j]);
                 }
                 if (mCallback != null) {
                     mCallback.onFftDataCapture(model);
